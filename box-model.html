@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            /* width: 250px;  */
+            /* height: 250px; */
+            background-color: #da455b;
+
+            /* overflow: auto; */
+            /* visible,hidden, scorll, auto */
+            /* overflow-x: ; */
+            /* overflow-y: scroll; */
+
+            /* 邊框border */
+            /* border-width: 15px; */
+            /* border-color: orange; */
+            /* border-style: solid; */
+            /* 
+                solid, dotted, dashed, double
+                inset, outset, groove, ridge
+            */
+            border: 10px orange solid;
+            /* border-left: 10px blue solid;
+            border-right: 10px blue solid;
+            border-top: 10px blue solid;
+            border-bottom: 10px blue solid; */
+
+            /* border-top-color: ;
+            border-top-width: ;
+            border-top-style: ; */
+
+            /* border-radius: 10px; */
+            
+            /* 內距 Padding */
+            /* padding: 30px; */
+            /* padding-left:; */
+            /* padding-right:; */
+            /* padding-top:; */
+            /* padding-bottom:; */
+
+            /* padding-inline: 50px; */
+            /* padding-inline-start:100px; */
+            /* padding-inline-end:100px; */
+            /* padding-block:30px; */
+            /* padding-block-start:100px; */
+            /* padding-block-end: 100px; */
+
+            /* 外距 Margin */
+            /* margin:100px; */
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            /* margin-top: 100px; */
+            /* margin-bottom: 50px; */
+            margin-inline: auto;
+            /* margin-inline-start:; */
+            /* margin-inline-end:; */
+            margin-block: auto;
+            /* margin-block-start:; */
+            /* margin-block-end:; */
+
+            /* box-sizing: border-box; */
+
+            /* 縮寫 */
+            padding: 50px 100px;
+            /* 上下 左右 */
+            padding: 50px 100px 0px;
+            /* 上 左右 下 */
+            padding: 50px 100px 0px 100px;
+            /* 上 右 下 左 */
+
+            /* border-radius: 50px 0px; */
+            /* 左上 右下 */
+
+            /* border-radius: 50px 0px 10px; */
+            /* 左上 右上左下 右下 */
+
+            /* border-radius: 50px 0px 10px 30px; */
+            /* 左上 右上 右下 左下 */
+
+            /* border-radius: 30px / 50px; */
+            border-radius:  30px / 50px;
+            /* x / y */
+            border-radius:  30px 10px / 50px 20px;
+            /* 
+                左上右下x 右上左下x / 左上右下y 右上左下y
+            */
+            border-radius:  30px 10px 10px  / 50px 20px 80px ;
+            /* 
+                左上x  右上左下x 右下x / 左上y  右上左下y 右下y
+            */
+            border-radius:  30px 10px 10px 100px / 50px 20px 80px 50px;
+            /* 
+                左上x 右上x 右下x 左下x /左上y 右上y 右下y 左下y
+            */
+        }
+        /* 
+            在沒有設定高度的狀態下，區塊高度是以內容決定，若沒有內容，則高度為零
+            高度的％，必須要有父層高度才有作用
+            vh: viewport height
+            vw: viewport width 
+        */
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iste, aperiam quaerat, sequi vel doloribus placeat quod illo error, consequatur aliquam voluptas nobis quasi corporis alias voluptatem recusandae odit accusantium.
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iste, aperiam quaerat, sequi vel doloribus placeat quod illo error, consequatur aliquam voluptas nobis quasi corporis alias voluptatem recusandae odit accusantium.
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iste, aperiam quaerat, sequi vel doloribus placeat quod illo error, consequatur aliquam voluptas nobis quasi corporis alias voluptatem recusandae odit accusantium.
+    </div>
+</body>
+</html>
