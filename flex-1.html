@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* row, column, row-reverse, column-reverse  */
+        }
+        .box {
+            /* width: 400px; */
+            /* width: 33.3333%; */
+            width: calc(100% / 3);
+            padding:15px;
+        }
+        /* 
+            flex
+            換行與壓縮會有衝突
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ab veniam vero magni, id modi similique delectus numquam optio quam velit neque animi ad rem obcaecati? Perspiciatis iusto explicabo ea?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Reiciendis nihil non aliquam necessitatibus adipisci sunt perferendis tenetur voluptate commodi vero, veritatis totam! Excepturi assumenda placeat corporis eum, quas ducimus in optio at tempora fugit temporibus qui, itaque ullam amet necessitatibus? Perferendis placeat eos, odio nesciunt ad esse accusantium?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, laboriosam fuga dolorem ea reiciendis ipsum debitis eos, facilis eveniet quos nostrum enim cum ipsa, earum mollitia tempora aspernatur dolore corrupti?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, laboriosam fuga dolorem ea reiciendis ipsum debitis eos, facilis eveniet quos nostrum enim cum ipsa, earum mollitia tempora aspernatur dolore corrupti?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 5</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, laboriosam fuga dolorem ea reiciendis ipsum debitis eos, facilis eveniet quos nostrum enim cum ipsa, earum mollitia tempora aspernatur dolore corrupti?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

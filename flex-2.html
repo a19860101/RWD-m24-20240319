@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ccc;
+            display: flex;
+            height: 600px;
+            flex-direction: column;
+
+            justify-content: center;
+            /* start, end, center, space-between, space-around, space-evenly */
+
+            align-items: center;
+            /* start, end, center, baseline, stretch */
+
+            /* 
+                當flex-direction為row時
+                justify-content表水平對齊
+                align-items表垂直對齊
+                
+                當flex-direction為column時
+                justify-content表垂直對齊
+                align-items表水平對齊
+            */
+        }
+        .box {
+            width: 200px;
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus nesciunt, iste enim reiciendis delectus ipsam saepe repellendus voluptates repudiandae architecto ipsa veniam consequuntur ducimus nemo, sed aperiam? Iure, tempore?
+            </p>
+        </div>
+        <!-- <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus nesciunt, iste enim reiciendis delectus ipsam saepe repellendus voluptates repudiandae architecto ipsa veniam consequuntur ducimus nemo, sed aperiam? Iure, tempore?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus nesciunt, iste enim reiciendis delectus ipsam saepe repellendus voluptates repudiandae architecto ipsa veniam consequuntur ducimus nemo, sed aperiam? Iure, tempore?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus nesciunt, iste enim reiciendis delectus ipsam saepe repellendus voluptates repudiandae architecto ipsa veniam consequuntur ducimus nemo, sed aperiam? Iure, tempore?
+            </p>
+        </div> -->
+    </div>
+</body>
+</html>

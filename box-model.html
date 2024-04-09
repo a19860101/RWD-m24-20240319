@@ -26,7 +26,7 @@
                 solid, dotted, dashed, double
                 inset, outset, groove, ridge
             */
-            border: 10px orange solid;
+            /* border: 10px orange solid; */
             /* border-left: 10px blue solid;
             border-right: 10px blue solid;
             border-top: 10px blue solid;
@@ -68,11 +68,11 @@
             /* box-sizing: border-box; */
 
             /* 縮寫 */
-            padding: 50px 100px;
+            /* padding: 50px 100px; */
             /* 上下 左右 */
-            padding: 50px 100px 0px;
+            /* padding: 50px 100px 0px; */
             /* 上 左右 下 */
-            padding: 50px 100px 0px 100px;
+            /* padding: 50px 100px 0px 100px; */
             /* 上 右 下 左 */
 
             /* border-radius: 50px 0px; */
@@ -85,21 +85,28 @@
             /* 左上 右上 右下 左下 */
 
             /* border-radius: 30px / 50px; */
-            border-radius:  30px / 50px;
+            /* border-radius:  30px / 50px; */
             /* x / y */
-            border-radius:  30px 10px / 50px 20px;
+            /* border-radius:  30px 10px / 50px 20px; */
             /* 
                 左上右下x 右上左下x / 左上右下y 右上左下y
             */
-            border-radius:  30px 10px 10px  / 50px 20px 80px ;
+            /* border-radius:  30px 10px 10px  / 50px 20px 80px ; */
             /* 
                 左上x  右上左下x 右下x / 左上y  右上左下y 右下y
             */
-            border-radius:  30px 10px 10px 100px / 50px 20px 80px 50px;
+            /* border-radius:  30px 10px 10px 100px / 50px 20px 80px 50px; */
             /* 
                 左上x 右上x 右下x 左下x /左上y 右上y 右下y 左下y
             */
+            /* outline */
+            /* outline: 10px solid yellow; */
+            outline-offset: 10px;
+            outline-width: 10px;
+            outline-color: yellow;
+            outline-style: solid;
         }
+
         /* 
             在沒有設定高度的狀態下，區塊高度是以內容決定，若沒有內容，則高度為零
             高度的％，必須要有父層高度才有作用
