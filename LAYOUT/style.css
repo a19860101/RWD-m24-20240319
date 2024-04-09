@@ -1,0 +1,105 @@
+nav {
+    width: 100%;
+    padding-block: 20px;
+    background-color: #363636;
+
+    display: flex;
+    /* justify-content: space-between; */
+    padding-inline: 15px;
+}
+.nav-menu {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: #eee;
+}
+/* header */
+/* header {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #ccc;
+    background-image: url('https://picsum.photos/id/27/1200/600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+} */
+header {
+    width: 100%;
+    aspect-ratio: 16/10;
+    max-height: 800px;
+    position: relative;
+
+    background-color: #5e5e5e;
+}
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header-content {
+    position: absolute;
+    /* width: fit-content; */
+    /* width: 60%; */
+    /* max-width: 800px; */
+    width: min(800px,60%);
+    height: fit-content;
+    background-color: rgb(255 255 255 / .4);
+    backdrop-filter: blur(5px);
+    inset: 0; /* 等同top,bottom,left,right同時設定 */
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+.header-content  h1 {
+    font-size: 4rem;
+}
+.header-content p {
+    opacity: .8;
+}
+#about {
+    padding-block:100px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
+
+}
+.container {
+    width:min(1200px,100%);
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+}
+.about-img {
+    flex:0 0 50%;
+    padding: 30px;
+    position: relative;
+    right: -100px;
+
+    
+}
+.about-img img {
+    box-shadow: 
+        -15px 15px 0 0 #7AA2E3,
+        -30px 30px 0 0 #6AD4DD;
+    /* x y 模糊 擴散 顏色 */
+}
+.about-content {
+    flex:0 0 50%;
+    padding: 30px;
+    background-color: rgb(248, 246, 227 , .5);
+    backdrop-filter: blur(5px);
+    position: relative;
+    left:-100px
+}
