@@ -75,11 +75,15 @@ header img {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
 
 }
+#about h3 {
+    font-size: 1.5rem;
+}
 .container {
     width:min(1200px,100%);
     display: flex;
     margin-inline: auto;
     align-items: center;
+    flex-wrap: wrap;
 }
 .about-img {
     flex:0 0 50%;
@@ -89,6 +93,13 @@ header img {
 
     
 }
+/* 
+https://colorhunt.co/palette/f8f6e397e7e16ad4dd7aa2e3
+https://colorhunt.co/palette/49698958a399a8cd9fe2f4c5
+https://colorhunt.co/palette/008dda41c9e2ace2e1f7eedd
+https://gradienthunt.com/gradient/45578
+*/
+
 .about-img img {
     box-shadow: 
         -15px 15px 0 0 #7AA2E3,
@@ -102,4 +113,51 @@ header img {
     backdrop-filter: blur(5px);
     position: relative;
     left:-100px
+}
+/* folio */
+#folio {
+    padding-block: 100px;
+    background-image: linear-gradient( 175deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% );
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2b2b2b;
+}
+.folio-item {
+    flex:0 0 25%;
+    padding: 10px;
+}
+.folio-item a {
+    background-color: #a7fff9;
+    display: block;
+}
+.folio-item a img {
+    transition: 300ms;
+}
+/* .folio-item a:hover img{
+    opacity: .2;
+} */
+#folio:hover img:not(:hover) {
+    opacity: .2;
+}
+/* contact */
+#contact {
+    padding-block:100px;
+    background-color: #ffe6c9;
+}
+.contact-item {
+    flex:0 0 calc(100% / 4);
+    text-align: center;
+}
+#contact a {
+    color: #fd7240;
+}
+
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding-block: 15px;
 }
