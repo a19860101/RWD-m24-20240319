@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ca0083;
+
+            /* animation: a2 5s; */
+            animation-name: a1;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            /* normal, reverse, alternate, alternate-reverse */
+            animation-iteration-count: 1;
+            /* inifinte */
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            /* ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier() */
+        }
+        @keyframes a1 {
+            from {
+                transform: translateX(0)rotate(0);
+                background-color: #ca0083;
+            }
+            to {
+                transform: translateX(500px)rotate(180deg);
+                background-color: #0094ca;
+            }
+        }
+        @keyframes a2 {
+            0% {
+                transform: translate(0)rotate(0);
+            }
+            25% {
+                transform: translate(300px,0)rotate(90deg);
+            }
+            50% {
+                transform: translate(300px,300px)rotate(180deg);
+            }
+            75% {
+                transform: translate(0,300px)rotate(270deg);
+            }
+            100% {
+                transform: translate(0,0x)rotate(360deg);
+            }
+        }
+        h1 {
+            font-size: 5rem;
+            animation: fade-out 1s forwards ease;
+            transform-origin: left;
+        }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateX(-50px)scale(0);
+                filter: blur(5px)
+            }
+        }
+        @keyframes fade-out {
+            to {
+                opacity: 0;
+                transform: translateX(-50px)scale(0);
+                filter: blur(5px)
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HELLO</h1>
+    <div class="box"></div>
+</body>
+</html>

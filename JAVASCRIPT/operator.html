@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 運算子 -->
+    <script>
+        let x = 10;
+        let y = 6;
+
+        // 算術運算子
+        console.log(x + y);// 16
+        console.log(x - y);// 4
+        console.log(x * y);// 60
+        console.log(x / y);// 1.66..
+        console.log(x % y);// 4
+
+        // 比較運算子
+        console.log(x > y); // true
+        console.log(x >= y); // true
+        console.log(x < y); // false
+        console.log(x <= y); //false
+        console.log(x == y); // false
+        console.log(x === y); // false
+        console.log(x != y); // true
+
+        let a = 10;
+        let b = '10';
+        console.log(a == b); // true
+        console.log(a === b); // false 值與資料型態皆須相同
+
+        // 指定運算子
+        console.log(x = y); // 6
+        console.log(x += y); // x = x + y = 6 + 6 = 12
+        console.log(x -= y); // x = x - y = 12 - 6 = 6
+        console.log(x *= y); // x = x * y = 6 * 6 = 36
+        console.log(x /= y); // x = x / y = 36 / 6 = 6
+        console.log(x %= y); // x = x % y = 6 / 6 = 1...0 
+
+        // 邏輯運算子
+        // console.log(x != y);
+        console.log(!x); //true
+        console.log(x > 0 && y > 0);// and ,false
+        console.log(x > 0 || y > 0);// or, true
+
+        // 二元運算子
+
+        let i = -10;
+        let txt = 'success';
+        // let txt = null;
+
+        // let result = i > 0 ? '正' : '負';
+        let result= txt  ?? 'error';
+
+        console.log(result);
+    </script>
+</body>
+</html>
