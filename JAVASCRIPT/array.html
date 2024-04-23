@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let x =  Array();
+        // x[0] = 'Apple';
+        // x[1] = 'Banana';
+        // x[2] = 'Cat';
+        // console.log(x);
+
+        // let x2 = Array('Apple','Banana','Cat');
+        // console.log(x2);
+        
+        // let x3 = ['Apple','Banana','Cat'];
+        // console.log(x3);
+
+        let drinks = ['紅茶','綠茶','奶茶','多多綠','珍珠奶茶'];
+        console.log(drinks);
+        console.log(drinks[0]);
+        console.log(drinks[1]);
+        console.log(drinks[2]);
+        console.log(drinks[3]);
+
+        // 陣列長度
+        console.log(drinks.length);
+
+        for(let i=0;i<drinks.length;i++){
+            console.log(drinks[i]);
+        }
+
+        // for...in 產生陣列索引
+        for(let item in drinks){
+            console.log(item);
+            // console.log(drinks[item]);
+        }
+
+        // for...of 產生陣列內容
+        for(let item of drinks){
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

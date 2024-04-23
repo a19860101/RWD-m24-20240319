@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let drinks = ['紅茶','綠茶','奶茶','多多綠','珍珠奶茶'];
+        
+        // push() 在陣列後方新增資料
+        // drinks.push('拿鐵');
+
+        // pop() 刪除陣列最後一筆資料
+        // drinks.pop();
+        // drinks.pop();
+
+        // unshift() 在陣列前方新增資料
+        // drinks.unshift('水');
+
+        // shift() 刪除陣列第一筆資料
+        // drinks.shift();
+        // drinks.shift();
+
+        // splice() 拼接
+        // drinks.splice(2,1);
+        // drinks.splice(1,2);
+        // drinks.splice(1,1,'青茶');
+        // drinks.splice(1,0,'青茶','烏龍茶');
+
+        // slice() 切片
+        // let slice_drinks = drinks.slice(1,4);
+        // let slice_drinks = drinks.slice(3);
+        // let slice_drinks = drinks.slice(-2);
+        // console.log(slice_drinks);
+
+        // toString() 陣列轉字串
+        console.log(drinks.toString());
+
+        // join()
+        console.log(drinks.join('___'))
+
+        // split() 字串轉陣列
+        let txt = 'hello world';
+        let txt2 = 'hello,world'
+        console.log(txt.split(' '));
+        console.log(txt2.split(','));
+
+        //sort() 排序
+        let x = ['C','B','D','A'];
+        // console.log(x.sort())
+
+        //reverse() 反轉
+        // console.log(x.reverse());
+
+        // console.log(x.sort().reverse())
+
+        let result =txt.split('').reverse().join('');
+        console.log(result);
+
+        console.log(drinks);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj = Object();
+        // obj.name = 'Text';
+        // obj.mail = 'asdf@gmail.com';
+        // obj.phone = '0987654321'
+        
+        // let user = {}
+        // user.name = 'John';
+        // user.mail = 'john@asdgasdg.com'
+        
+        let user = {
+            name: 'john',
+            mail: 'asdf@gmail.com',
+            phone: '098765432'
+            // 屬性: 值
+        }
+
+        console.log(user.name);
+        console.log(user.mail);
+        console.log(user.phone);
+
+        let drinks = [
+            {
+                id:1,
+                name: '紅茶',
+                price: '25'
+            },
+            {
+                id:2,
+                name: '綠茶',
+                price: '25'
+            },
+            {
+                id:3,
+                name: '奶茶',
+                price: '35'
+            },
+            {
+                id:4,
+                name: '珍珠奶茶',
+                price: '50'
+            },
+        ];
+        // console.log(drinks);
+        // console.log(drinks[1].name);
+        // console.log(drinks[2].price);
+
+        for(let drink of drinks){
+            console.log(drink.id)
+            console.log(drink.name)
+            console.log(drink.price)
+        }
+
+    </script>
+</body>
+</html>

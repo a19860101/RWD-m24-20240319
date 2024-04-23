@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let drinks = [
+            {
+                id:1,
+                name: '紅茶',
+                price: '25'
+            },
+            {
+                id:2,
+                name: '綠茶',
+                price: '25'
+            },
+            {
+                id:3,
+                name: '奶茶',
+                price: '35'
+            },
+            {
+                id:4,
+                name: '珍珠奶茶',
+                price: '50'
+            },
+        ];
+        // 陣列迭代
+        //forEach
+        // drinks.forEach(function(data,idx){
+        //     console.log(idx);
+        //     console.log(data.name)
+        // })
+
+        // map
+        let drinks_name = drinks.map(function(data){
+            return data.name;
+        })
+        let drinks_price = drinks.map(function(data){
+            return data.price;
+        })
+        console.log(drinks_name)
+        console.log(drinks_price)
+
+        //filter
+        let cheap = drinks.filter(function(data){
+            return data.price <= 30;
+        })
+        console.log(cheap);
+
+        let expensive = drinks.filter(function(data){
+            return data.price >= 40;
+        })
+        console.log(expensive);
+
+        let newDrinks = drinks.filter(function(data){
+            // return data.name != '綠茶';
+            return data.name.indexOf('奶') > -1;
+        })
+
+        
+        console.log(newDrinks);
+
+        //find 尋找資料 回傳一筆
+        let find_drinks = drinks.find(function(data){
+            return data.name === '紅茶';
+        })
+        console.log(find_drinks)
+    </script>
+</body>
+</html>
