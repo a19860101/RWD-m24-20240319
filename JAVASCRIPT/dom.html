@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="title">hello DOM</h1>
+    <p>
+        官方聰明，拿出經典。
+    </p>
+    <p class="content">
+        老人品質意外解放不錯引進，你們的各位隱。
+    </p>
+    <ul>
+        <li class="item">list 1</li>
+        <li class="item">list 2</li>
+        <li class="item">list 3</li>
+        <li class="item">list 4</li>
+    </ul>
+    <a href="#">link</a>
+    <script>
+        //dom document object model 文件物件模型
+        
+        //getElement
+        // let title = document.getElementById('title');
+        // console.log(title)
+
+        // let contents = document.getElementsByClassName('content')[0];
+        // console.log(contents);
+        // let items = document.getElementsByClassName('item');
+        // console.log(items[0]);
+        // console.log(items[1]);
+        // console.log(items[2]);
+        // console.log(items[3]);
+
+        // let li = document.getElementsByTagName('li');
+        // console.log(li);
+
+        // querySelector
+        let title = document.querySelector('#title');
+        console.log(title)
+
+        let contents = document.querySelector('.content');
+        console.log(contents);
+        let items = document.querySelectorAll('.item');
+        console.log(items);
+        console.log(items[0]);
+
+        let li = document.querySelectorAll('li');
+        console.log(li);
+    </script>
+</body>
+</html>

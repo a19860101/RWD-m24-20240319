@@ -70,6 +70,51 @@
             return data.name === '紅茶';
         })
         console.log(find_drinks)
+
+        // findIndex() 尋找資料索引值
+        let find_index = drinks.findIndex(function(data){
+            return data.name === '奶茶';
+        })
+        console.log(find_index);
+
+        //every() 每一個都符合 回傳true
+
+        let drinks_every = drinks.every(function(data){
+            return data.price > 30;
+        });
+        console.log(drinks_every);
+
+        // some() 部分符合 回傳true
+        let drinks_some = drinks.some(function(data){
+            return data.price > 30;
+        })
+        console.log(drinks_some);
+
+        // reduce()
+        // let price = [100,222,333];
+        // let total = price.reduce(function(a,b){
+        //     console.log('a:',a);
+        //     console.log('b:',b);
+        //     return a + b;
+        // })
+        // let price = drinks.map(function(data){
+        //     return data.price;
+        // })
+        // console.log(price);
+        // let total = price.reduce(function(a,b){
+        //     return Number(a) + Number(b);
+        // });
+        // let total = drinks.map(function(data){
+        //     return data.price;
+        // }).reduce(function(a,b){
+        //     return Number(a)+Number(b);
+        // })
+        let total = drinks.map(data=>data.price).reduce((a,b)=>Number(a)+Number(b))
+
+
+        // a 該索引值加前一個索引值 b第二個索引值
+        console.log(total);
+
     </script>
 </body>
 </html>

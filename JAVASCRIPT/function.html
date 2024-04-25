@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 具名函式
+        // 函式宣告式 function declaration 有提升性
+
+        console.log(test());
+        function test(){
+            let a = 100;
+            return a;
+        }
+
+        // 函式表達式 function expression
+        console.log(test2());
+        let test2 = function(){
+            let a = 123;
+            return a;
+        }
+
+        // let foo = function(a){
+        //     return a;
+        // }
+
+        // let foo = function(a,b){
+        //     return a + b;
+        // }
+
+        // let foo = function(a,b){
+        //     return (a*1.05) + b;
+        // }
+
+        // let foo = function(a,b){
+        //     let result = (a+b)*1.1;
+        //     return result;
+        // }
+
+        // function foo(a,b){
+        //     let result = (a+b)*1.1;
+        //     return result;
+        // }
+
+        // function jp_ntd(jp,exc){
+        //     return jp*exc;
+        // }
+        // console.log(jp_ntd(100000,0.215));
+
+        // 箭頭函式arrow function
+        // let foo = () => {
+        //     return 'hello';
+        // }
+
+        // 當只有一個參數時，小括號可省略
+        // let foo = a => {
+        //     return a;
+        // }
+
+        // 當有兩個以上參數或沒有參數時，小括號不可省略
+        // let foo = (a,b) => {
+        //     return a + b;
+        // }
+
+        // 當大括號內只有return時，大括號與return可省略
+        // let foo = a => a;
+
+        // 當回傳值是物件時，大括號會變成函式的大括號，所以需要在外層加上小括號，否則會回傳undefined
+
+        let foo = (a) => (
+            {
+                value:a
+            }
+        )
+        
+        console.log(foo(123));
+    </script>
+</body>
+</html>
