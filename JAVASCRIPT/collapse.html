@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .collapse {
+            max-width: 600px;
+            margin-inline: auto;
+        }
+        .collapse-btn {
+            background-color: #80eaff;
+            padding: 10px 20px;
+            /* border-bottom: 1px solid #3a6b75; */
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .collapse-panel {
+            padding:0 20px;
+            background-color: #c8f6ff;
+            border-bottom: 1px solid #3a6b75;
+
+            height: 0;
+            overflow: hidden;
+
+            transition: 600ms;
+            box-sizing: content-box;
+        }
+        .collapse-panel.active {
+            padding: 20px;
+        }
+        .arrow {
+            width: 13px;
+            height: 13px;
+            border-bottom: 3px solid #000;
+            border-left: 3px solid #000;
+            transform: rotate(-45deg);
+            transition: 600ms;
+        }
+        .collapse-btn.active .arrow {
+            transform: rotate(135deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse">
+        <h2 class="collapse-btn">title 1
+            <span class="arrow"></span>
+        </h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero natus sapiente, voluptatem accusantium repellat tenetur? Itaque hic sed, voluptates unde quis quae amet ab nostrum perferendis? Deserunt ullam numquam dolores.
+            </p>
+        </div>
+        <h2 class="collapse-btn">title 2 
+            <span class="arrow"></span></h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consectetur iste asperiores. Nihil dolorem ducimus illum ratione? Praesentium minima est voluptas quisquam itaque sed? Vel perferendis ab veniam sint nisi, commodi illo nesciunt reprehenderit, soluta consequatur dolorem quos alias voluptas pariatur doloribus cupiditate ex delectus ipsam. Quia vel doloribus perspiciatis voluptatibus nostrum dolore commodi amet!
+            </p>
+        </div>
+        <h2 class="collapse-btn">title 3 
+            <span class="arrow"></span></h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ipsum sequi tenetur placeat deserunt magnam deleniti tempora repellat. Doloremque facilis voluptatum repellendus magni quod!
+            </p>
+        </div>
+    </div>
+    <script>
+        let btns = document.querySelectorAll('.collapse-btn');
+        for(let btn of btns){
+            btn.onclick = function(){
+                console.log(this.nextElementSibling);
+                let panel = this.nextElementSibling;
+                this.classList.toggle('active');
+                if(panel.style.height){
+                    panel.style.height = null;
+                    panel.classList.remove('active');
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                    panel.classList.add('active');
+                }
+                console.log(panel.scrollHeight);
+            }
+        }
+    </script>
+</body>
+</html>
