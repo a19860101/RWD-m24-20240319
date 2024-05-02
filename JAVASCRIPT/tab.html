@@ -81,12 +81,21 @@
     <script>
         let tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
-            tabLink.onclick = function(){
+            // tabLink.onclick = function(){
+            //     document.querySelector('.tab-link.active').classList.remove('active');
+            //     let target = this.getAttribute('href');
+            //     // let target = this.dataset.target;
+            //     console.log(target);
+            //     this.classList.add('active');
+
+            //     document.querySelector('.tab-panel.active').classList.remove('active');
+            //     document.querySelector(target).classList.add('active');
+            // }
+            tabLink.onclick = e => {
                 document.querySelector('.tab-link.active').classList.remove('active');
-                let target = this.getAttribute('href');
-                // let target = this.dataset.target;
-                console.log(target);
-                this.classList.add('active');
+                let target = e.target.getAttribute('href');
+                // let target = e.target.dataset.target;
+                e.target.classList.add('active');
 
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(target).classList.add('active');
