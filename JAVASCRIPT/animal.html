@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .col {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <select name="kind" id="" class="select_kind"> </select>
+        <input type="submit">
+    </form>
+    <div class="container"></div>
+    <script>
+        let url = 'https://data.moa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&IsTransData=1';
+        let container = document.querySelector('.container');
+        fetch(url)
+        .then(res=>res.json())
+        .then(datas => {
+            // const kinds = Array.from(new Set(datas.map(d=>d.animal_kind)));
+            const kinds = [...new Set(datas.map(d=>d.animal_kind))];
+            console.log(kinds);
+            for(let k of kinds){
+                let opt = document.createElement('option');
+                opt.value = k;
+                opt.textContent = k;
+                document.querySelector('.select_kind').append(opt);
+            }
+            let form = document.querySelector('form');
+            form.onsubmit = e => {
+                container.textContent = '';
+                // let k = form.elements.kind.value;
+                let k = document.querySelector('.select_kind').value;
+                console.log(k);
+                let filterData = datas.filter(e=>e.animal_kind === k);
+                for(let data of filterData){
+ 
+                    let kind = document.createElement('div');
+                    kind.classList.add('kind');
+                    kind.append(data.animal_kind);
+
+                    let shelterName = document.createElement('div');
+                    shelterName.classList.add('shelterName');
+                    shelterName.append(data.shelter_name)
+                    
+                    let variety = document.createElement('div');
+                    variety.classList.add('variety');
+                    variety.append(data.animal_Variety)
+
+                    let img = document.createElement('img');
+                    img.setAttribute('src',data.album_file);
+                    img.setAttribute('loading','lazy');
+
+                    let col = document.createElement('div');
+                    col.classList.add('col');
+                    col.append(img,kind,variety,shelterName);
+
+                    container.append(col);
+                }
+                return false;
+            }
+            
+        })
+    </script>
+</body>
+</html>
