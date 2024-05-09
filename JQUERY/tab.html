@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tab {
+            width: 600px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .tab-nav {
+            background-color: #aaa;
+            display: flex;
+        }
+        .tab-link {
+            color: #000;
+            text-decoration: none;
+            padding: 8px 20px;
+            transition: 600ms;
+        }
+        .tab-link.active {
+            background-color: #ffd98e;
+        }
+        .tab-panel {
+            background-color: #ffd98e;
+            padding: 20px;
+            position: absolute;
+            display: none;
+        }
+        #tab-1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#tab-1" data-target="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" data-target="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#tab-3" data-target="#tab-3" class="tab-link">Tab 3</a>
+            <a href="#tab-4" data-target="#tab-4" class="tab-link">Tab 4</a>
+        </div>
+        <div class="tab-panel" id="tab-1">
+            <h3>Tab 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime labore ratione voluptas autem, odio perferendis dolores pariatur magnam quia harum consectetur ipsum doloribus voluptates. Magnam voluptates quasi repudiandae nihil!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h3>Tab 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum voluptatibus quasi aspernatur exercitationem? Beatae harum libero quis? Mollitia recusandae, similique quibusdam ex eum pariatur enim perferendis quam blanditiis et sint veniam, id accusantium vel eaque odio quos! Neque totam veniam doloribus magnam maiores dolorum iusto optio illo, dolore, fugiat vel deleniti laudantium rerum. Necessitatibus, harum explicabo. Placeat, iure numquam.
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h3>Tab 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptate eos eveniet eum quidem modi! Quidem dicta voluptatem explicabo quo pariatur? Ut odit dignissimos suscipit, ipsam maxime soluta, rerum porro laboriosam iusto repellendus dolorum voluptatibus ex ad, quidem mollitia cupiditate. Tenetur, culpa.
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-4">
+            <h3>Tab 4</h3>
+            <p>
+                德國武器，獨立諮詢貸款兩人名稱，昨日能不能指定，表現武器請大家我很閲讀者二人面議總部我家這樣私服避免，建議簡體辦公室或者無疑少年，國內外孩子失望來源電腦太多日記一定要很大利用手術，一位幾乎外國民族多種博士人口通用瀏覽，性質感受好友，後面淡淡，地區兩位精神。
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.tab-link').click(function(){
+                let data = $(this).data('target');
+                // let data = $(this).attr('href');
+                // $('.tab-panel').fadeOut();
+                // $(data).fadeIn()
+                $('.tab-panel').slideUp();
+                $(data).slideDown()
+
+                $('.tab-link.active').removeClass('active');
+                $(this).addClass('active');
+            })
+        })
+    </script>
+</body>
+</html>

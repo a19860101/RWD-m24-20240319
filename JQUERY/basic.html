@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#title').css({
+                color: 'red',
+                backgroundColor: 'blue'
+            })
+
+            $('.content').css({
+                'background-color':'pink'
+            })
+
+            $('.list').css({
+                'color': 'orange'
+            })
+        });
+        // window.onload = function(){
+        //     let el = document.querySelector('#title');
+        //     console.log(el);
+        // }
+    </script>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum eveniet ut repudiandae cumque, adipisci alias nemo voluptates fugiat, animi fuga at praesentium quidem, blanditiis sunt laboriosam! Officia saepe fugiat maxime?
+    </p>
+    <ul>
+        <li class="list">list-1</li>
+        <li class="list">list-2</li>
+        <li class="list">list-3</li>
+        <li class="list">list-4</li>
+        <li class="list">list-5</li>
+    </ul>
+    <a href="#">link</a>
+    
+</body>
+</html>

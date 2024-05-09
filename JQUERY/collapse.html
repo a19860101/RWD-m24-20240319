@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .collapse {
+            width: 600px;
+            margin: auto;
+        }
+        h2 {
+            padding: 15px;
+            background-color: #fff5ac;
+            border-bottom:1px solid #9b9a79;
+
+            transition: 600ms;
+        }
+        .collapse-panel {
+            padding: 15px;
+            background-color: #fffad2;
+            display: none;
+        }
+        .active {
+            background-color: #ffa2b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse">
+        <h2>title 1</h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum similique ad voluptatum incidunt sit iusto veniam blanditiis illum nisi itaque voluptatem aut, sunt excepturi rem nesciunt eveniet omnis perferendis architecto!
+            </p>
+        </div>
+        <h2>title 2</h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aut, explicabo cumque ullam rerum porro, placeat nihil eveniet suscipit quibusdam quidem asperiores repudiandae. Tenetur dolorum eaque perferendis maiores esse alias eius quas, culpa libero eos magnam, suscipit velit? Atque cumque accusantium autem porro.
+            </p>
+        </div>
+        <h2>title 3</h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum similique ad voluptatum incidunt sit iusto veniam blanditiis illum nisi itaque voluptatem aut, sunt excepturi rem nesciunt eveniet omnis perferendis architecto!
+            </p>
+        </div>
+        <h2>title 4</h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consectetur ullam dicta aut, praesentium deserunt nam. Iste magni vel dolores veniam eveniet molestias libero beatae atque at labore, consequuntur enim blanditiis, in incidunt, nostrum facere ratione? Laborum, eligendi! Magni nesciunt tenetur culpa? Iusto voluptatibus odit quos dicta nesciunt, dolorum expedita aliquid earum corrupti nostrum eum minima. Itaque dolorum maxime sapiente delectus eius.
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('h2').click(function(){
+                // $(this).next().show();
+                // $(this).next().toggle(600);
+                // $(this).next().fadeToggle()
+                $(this).next().slideToggle()
+                $(this).toggleClass('active');
+            })
+        })
+    </script>
+</body>
+</html>
