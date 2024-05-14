@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin-inline: auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            width: 100%;
+            padding: 15px;
+        }
+        @media(width > 600px){
+            .col {
+                width: 50%;
+            }
+        }
+        @media(width > 1200px){
+            .col {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container row">
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minus, aspernatur maxime eligendi modi nemo ea, est aperiam voluptatum velit illo quaerat, quis voluptas accusamus iusto? Beatae atque fugiat eos?
+            </p>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minus, aspernatur maxime eligendi modi nemo ea, est aperiam voluptatum velit illo quaerat, quis voluptas accusamus iusto? Beatae atque fugiat eos?
+            </p>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minus, aspernatur maxime eligendi modi nemo ea, est aperiam voluptatum velit illo quaerat, quis voluptas accusamus iusto? Beatae atque fugiat eos?
+            </p>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minus, aspernatur maxime eligendi modi nemo ea, est aperiam voluptatum velit illo quaerat, quis voluptas accusamus iusto? Beatae atque fugiat eos?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

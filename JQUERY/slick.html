@@ -15,9 +15,15 @@
         header {
             width: 100%;
         }
-        .slider {
-            width: 1200px;
+        img {
+            width: 100%;
+        }
+        .slider,.products {
+            max-width: 1200px;
             margin: auto;
+        }
+        .products .slick-slide {
+            margin: 10px;
         }
     </style>
 </head>
@@ -44,6 +50,46 @@
             </div>
         </div>
     </header>
+    <section>
+        <div class="products">
+            <div class="product-item">
+                <img src="https://picsum.photos/id/40/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/41/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/42/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/43/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/44/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/45/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/46/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/47/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/48/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/49/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/50/300" alt="">
+            </div>
+            <div class="product-item">
+                <img src="https://picsum.photos/id/51/300" alt="">
+            </div>
+        </div>
+    </section>
     <script>
         $(function(){
             $('.slider').slick({
@@ -53,6 +99,24 @@
                 speed: 1200,
                 autoplaySpeed:6000,
                 fade: true
+            });
+            $('.products').slick({
+                slidesToShow:6,
+                slidesToScroll:1,
+                responsive:[
+                    {
+                        breakpoint:1200,
+                        settings: {
+                            slidesToShow:4
+                        }
+                    },
+                    {
+                        breakpoint:600,
+                        settings: {
+                            slidesToShow:2
+                        }
+                    }
+                ]
             });
         })
     </script>
