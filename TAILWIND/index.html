@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,16 +27,19 @@
         .btn {
             @apply inline-block px-8 py-2 rounded-md bg-teal-400 hover:bg-teal-500 duration-300
         }
+        .service-icon {
+            @apply shrink-0 md:w-32 w-28 aspect-square border border-4 border-teal-900 bg-teal-700 rounded-full grid place-content-center mx-auto md:mb-6
+        }
     </style>
 </head>
 <body>
-    <nav class="flex justify-between bg-slate-900/30 backdrop-blur px-4 py-5 fixed w-full z-50">
+    <nav class="flex justify-between bg-teal-900/30 backdrop-blur px-4 py-5 fixed w-full z-50">
         <a href="#" class="text-slate-50">logo</a>
-        <div class="*:text-slate-50 hover:*:bg-slate-300 hover:*:text-slate-900 flex *:px-4 *:py-1 *:rounded-md *:duration-300">
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
+        <div class="*:text-slate-50 hover:*:bg-teal-300 hover:*:text-teal-900 flex *:px-4 *:py-1 *:rounded-md *:duration-300">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#folio">Folio</a>
         </div>
     </nav>
     <header class="w-full h-screen relative">
@@ -49,7 +52,7 @@
             <a href="#" class="btn">More</a>
         </div>
     </header>
-    <section class="bg-teal-50">
+    <section class="bg-teal-50" id="about">
         <div class="container flex flex-wrap lg:h-screen items-center py-24 lg:py-0 justify-center">
             <div class="lg:w-1/2 w-10/12">
                 <div class="rounded-lg ring ring-transparent ring-offset-teal-50 hover:ring-offset-8 hover:ring-teal-600 duration-500 overflow-hidden">
@@ -68,10 +71,10 @@
             </div>
         </div>
     </section>
-    <section class="bg-teal-100">
+    <section class="bg-teal-100" id="service">
         <div class="container flex flex-wrap md:h-screen items-center justify-center py-24 md:py-0 md:space-y-0 space-y-16">
             <div class="md:w-1/3 w-10/12 md:text-center text-left px-6 flex md:flex-col items-center">
-                <div class="shrink-0 md:w-32 w-28 aspect-square border border-4 border-teal-900 bg-teal-700 rounded-full grid place-content-center mx-auto md:mb-6">
+                <div class="service-icon">
                     <i class="fa-solid fa-pen-nib fa-4x text-teal-100"></i>
                 </div>
                 <div class="space-y-6 pl-6 md:pl-0">
@@ -82,7 +85,7 @@
                 </div>
             </div>
             <div class="md:w-1/3 w-10/12 md:text-center text-left px-6 flex md:flex-col items-center">
-                <div class="shrink-0 md:w-32 w-28 aspect-square border border-4 border-teal-900 bg-teal-700 rounded-full grid place-content-center mx-auto md:mb-6">
+                <div class="service-icon">
                     <i class="fa-solid fa-video fa-4x text-teal-100"></i>
                 </div>
                 <div class="space-y-6 pl-6 md:pl-0">
@@ -93,7 +96,7 @@
                 </div>
             </div>
             <div class="md:w-1/3 w-10/12 md:text-center text-left px-6 flex md:flex-col items-center">
-                <div class="shrink-0 md:w-32 w-28 aspect-square border border-4 border-teal-900 bg-teal-700 rounded-full grid place-content-center mx-auto md:mb-6">
+                <div class="service-icon">
                     <i class="fa-solid fa-code fa-4x text-teal-100"></i>
                 </div>
                 <div class="space-y-6 pl-6 md:pl-0">
@@ -105,5 +108,48 @@
             </div>
         </div>
     </section>
+    <section class="bg-teal-50" id="folio">
+        <div class="container flex flex-wrap min-h-screen py-24 items-center content-center justify-center">
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=1" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=2" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=3" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=4" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=5" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=6" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=7" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=8" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=9" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=10" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=11" alt="">
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 md:w-1/3 sm:w-1/2 w-5/12">
+                <img src="https://picsum.photos/600/400?random=12" alt="">
+            </div>
+        </div>
+    </section>
+    <footer class="bg-teal-900 text-teal-50 p-6 text-center">
+        <div>2024&copy;All Rights Reserved</div>
+    </footer>
 </body>
 </html>
