@@ -12,8 +12,32 @@
         <div>
             {{msg}}
         </div>
+        <div>
+            <ul>
+                <li v-for="list in lists">{{list}}</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li v-for="p in products">{{p.name}} / {{p.price}}</li>
+            </ul>
+        </div>
         <a v-bind:href="link">google</a>
         <a :href="link">google</a>
+        <form action="">
+            <input type="text" v-model="title">
+
+
+            <input type="checkbox" v-model="lists" value="apple">
+            <input type="checkbox" v-model="lists" value="banana">
+            <input type="checkbox" v-model="lists" value="cat">
+            {{lists}}
+        </form>
+        <button v-on:click="test()">click</button>
+        <button @click="test()">click</button>
+        <hr>
+        <button @click="active = !active">change</button>
+        {{active}}
     </div>
     <script>
         Vue.createApp({
@@ -21,7 +45,31 @@
                 return {
                     title: 'Hello Vue!!!',
                     msg: '123456',
-                    link: 'https://google.com'
+                    link: 'https://google.com',
+                    lists:['apple','banana','cat'],
+                    active:true,
+                    products:[
+                        {
+                            id:1,
+                            name:'紅茶',
+                            price: '20'
+                        },
+                        {
+                            id:2,
+                            name:'綠茶',
+                            price:'20'
+                        },
+                        {
+                            id:3,
+                            name:'奶茶',
+                            price:'30'
+                        }
+                    ]
+                }
+            },
+            methods:{
+                test(){
+                    alert('hello');
                 }
             }
         }).mount('#app')

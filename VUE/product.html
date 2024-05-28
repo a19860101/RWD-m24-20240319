@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .colors {
+            display: flex;
+        }
+        .colorBox {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}} {{colorName}}</h2>
+        <img :src="`images/${img}`" alt="" width="400">
+        <div class="colors">
+            <div 
+                v-for="p,idx in products" class="colorBox" 
+                :style="{backgroundColor:p.hex}"
+                @click="changeIndex(idx)"
+                ></div>
+        </div>
+        <div>
+            剩餘數量 {{active.qty}}
+        </div>
+        <div v-if="active.qty > 5">
+            熱賣中
+        </div>
+        <div v-else-if="active.qty > 0">
+            低庫存
+        </div>
+        <div v-else>
+            補貨中
+        </div>
+        <div>
+            <div v-if="active.sale">
+                <del>原價 {{active.price}}</del>
+                特價 {{active.sale}}
+            </div>
+            <div v-else>
+                價格 {{active.price}}
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    title:'iPhone 15',
+                    currentIndex:0,
+                    products:[
+                        {
+                            id:1,
+                            colorName: '藍色',
+                            hex:'blue',
+                            price: '29900',
+                            sale:'18900',
+                            img:'iphone-15-finish-select-202309-6-1inch-blue.webp',
+                            qty: 2,
+                        },
+                        {
+                            id:1,
+                            colorName: '黑色',
+                            hex:'#000',
+                            price: '29900',
+                            sale:'',
+                            img:'iphone-15-finish-select-202309-6-1inch-black.webp',
+                            qty: 0,
+                        },
+                        {
+                            id:1,
+                            colorName: '粉紅色',
+                            hex:'pink',
+                            price: '29900',
+                            sale:'',
+                            img:'iphone-15-finish-select-202309-6-1inch-pink.webp',
+                            qty: 3,
+                        },
+                        {
+                            id:1,
+                            colorName: '黃色',
+                            hex:'yellow',
+                            price: '29900',
+                            sale:'',
+                            img:'iphone-15-finish-select-202309-6-1inch-yellow.webp',
+                            qty: 31,
+                        },
+                        {
+                            id:1,
+                            colorName: '綠色',
+                            hex:'green',
+                            price: '29900',
+                            sale:'18900',
+                            img:'iphone-15-finish-select-202309-6-1inch-green.webp',
+                            qty:23,
+                        },
+                    ]
+                }
+            },
+            methods:{
+                changeIndex(idx){
+                    this.currentIndex = idx
+                    console.log( this.currentIndex)
+                }
+            },
+            computed:{
+                active(){
+                    return this.products[this.currentIndex]
+                },
+                img(){
+                    return this.active.img
+                },
+                colorName(){
+                    return this.active.colorName
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
