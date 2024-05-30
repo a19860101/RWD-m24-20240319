@@ -15,7 +15,7 @@
         
         <div class="container mx-auto flex flex-wrap">
             <div class="w-1/6" v-for="c in carts">
-                {{c}}
+                {{c.title}}
             </div>
         </div>
         <div class="container mx-auto flex flex-wrap">
@@ -29,7 +29,7 @@
                                 {{p.title}}</h3>
                         <div class="flex items-center justify-between bg-zinc-200">
                             <span>$.{{p.price}}</span>
-                            <a href="#" class="px-6 py-1 rounded-lg text-sm bg-blue-300" @click="addToCart(p.id)">加入購物車</a>
+                            <a href="#" class="px-6 py-1 rounded-lg text-sm bg-blue-300" @click="addToCart(p)">加入購物車</a>
                         </div>
                     </div>
                 </div>
@@ -45,9 +45,9 @@
                 }
             },
             methods:{
-                addToCart(id){
-                    console.log(id)
-                    this.carts.push(id)
+                addToCart(p){
+                    console.log(p)
+                    this.carts.push(p)
                 }
             },
             created(){
