@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <app-title></app-title>
+        <app-title></app-title>
+        <app-title></app-title>
+        <app-title-2></app-title-2>
+        <app-title-2></app-title-2>
+        <app-title-2></app-title-2>
+    </div>
+    <script type="module">
+        import AppTitle from './AppTitle.js';
+        console.log(AppTitle);
+        let app = Vue.createApp({
+            data(){
+                return {
+
+                }
+            },
+            components:{
+                'app-title':AppTitle
+                // 'app-title':{
+                //     template:`<h1>{{title}}</h1>`,
+                //     data(){
+                //         return {
+                //             title:'hello 123'
+                //         }
+                //     }
+                // },
+                
+            }
+        })
+        app.component('app-title-2',{
+            template:`<h1>{{msg}}</h1>`,
+            data(){
+                return {
+                    msg:'hello'
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
