@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div>
+            <button @click="add()">click</button>
+
+            <form action="" @submit.prevent="create()" method="post">
+                <div>
+                    <label for="">Title</label>
+                    <input type="text" v-model="title">
+                </div>
+                <div>
+                    <label for="">Price</label>
+                    <input type="text" v-model="price">
+                </div>
+                <div>
+                    <label for="">Description</label>
+                    <input type="text" v-model="description">
+                </div>
+                <input type="submit">
+            </form>
+            <div v-for="p in products">
+                <form action="" @submit.prevent="update(p.id)" method="post">
+                <ul>
+                    <li>
+                        <input type="text" v-model="p.title">
+                    </li>
+                    <li>
+                        <input type="text" v-model="p.price">
+                    </li>
+                    <li>
+                        <input type="text" v-model="p.description">
+                    </li>
+                    <input type="submit" value="修改">
+                </form>
+                    <form action="" @submit.prevent="del(p.id)">
+                        <input type="submit">
+                    </form>
+
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                title:'',
+                price:'',
+                description:'',
+                products:[]
+            },
+            methods:{
+                add(){
+                    this.products.push(
+                        {
+                            title: this.title,
+                            price: this.price,
+                            description: this.description,
+                            categoryId:1,
+                            images: ['https://picsum.photos/300']
+                        }
+                    )
+                    console.log(this.products)
+                },
+                create(){
+                    let url = 'https://api.escuelajs.co/api/v1/products/';
+                    let post = {
+                            title: this.title,
+                            price: this.price,
+                            description: this.description,
+                            categoryId:1,
+                            images: ['https://picsum.photos/300']
+                        }
+                    fetch(url,{
+                        method:'POST',
+                        headers:{'Content-Type':'application/json'},
+                        body:JSON.stringify(post)
+                    }).then(res=>res.json()).then(data=>{
+                        this.products.push(post);
+                        console.log(this.products)
+                    });
+                },
+                del(id){
+                    let url = 'https://api.escuelajs.co/api/v1/products/'+id;
+                    fetch(url,{
+                        method:'DELETE'
+                    }).then(res=>res.json()).then(data=>{
+                        console.log(data)
+                        this.products = this.products.filter(data=>data.id!=id)
+                    })
+                },
+                update(id){
+                    let url = 'https://api.escuelajs.co/api/v1/products/'+id;
+                    let post = {
+                            title: this.title,
+                            // price: this.price,
+                            // description: this.description,
+                            // categoryId:1,
+                            // images: ['https://picsum.photos/300']
+                        }
+                    fetch(url,{
+                        method:'PUT',
+                        headers:{'Content-Type':'application/json'},
+                        body:JSON.stringify(post)
+                    }).then(res=>{
+                        console.log(res)
+                    }).then(data=>{console.log(data)})
+                }
+            },
+            mounted(){
+                let url = 'https://api.escuelajs.co/api/v1/products';
+                fetch(url).then(res=>res.json()).then(data=>{
+                    console.log(data)
+                    this.products = data.reverse();
+                })
+            }
+        })
+    </script>
+</body>
+</html>
