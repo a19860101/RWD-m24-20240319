@@ -1,4 +1,6 @@
+import Products from './Products.js'
 export default {
+    components:{Products},
     template:`
         <nav class="sticky w-full flex justify-between p-4 bg-slate-300">
             <a href="#">LOGO</a>
@@ -23,23 +25,7 @@ export default {
                 <i class="fa-solid fa-circle-xmark fa-xl"></i>
             </a>
         </div>
-        <div class="container mx-auto flex flex-wrap mt-6">
-            <div class="lg:w-1/4 md:w-1/3 w-1/2 p-3" v-for="p in products">
-                <div class="border border-zinc-600 min-h-full">
-                    <div class="aspect-square">
-                        <img :src="p.image" alt="" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-3 flex flex-col justify-between h-full">
-                        <h3 class="bg-blue-100">
-                                {{p.title}}</h3>
-                        <div class="flex items-center justify-between bg-zinc-200">
-                            <span>$.{{p.price}}</span>
-                            <a href="#" class="px-6 py-1 rounded-lg text-sm bg-blue-300" @click="addToCart(p)">加入購物車</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <products :products="products"></products>
     `,
     data(){
         return {
