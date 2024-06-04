@@ -18,5 +18,10 @@ export default {
     `,
     props:{
         p:Object
+    },
+    methods:{
+        addToCart(p){
+            this.$emit('addToCart',p)
+        }
     }
 }

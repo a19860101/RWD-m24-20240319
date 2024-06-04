@@ -1,19 +1,12 @@
 import Products from './Products.js'
 import Carts from './Carts.js'
+import Navigation from './Navigation.js'
 export default {
-    components:{Products,Carts},
+    components:{Products,Carts,Navigation},
     template:`
-        <nav class="sticky w-full flex justify-between p-4 bg-slate-300">
-            <a href="#">LOGO</a>
-            <div>
-                <a href="#" @click="isOpen = true">
-                    <span v-if="carts.length" >{{carts.length}}</span>
-                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
-                </a>
-            </div>
-        </nav>
-        <carts :isOpen="isOpen" :carts="carts" :total="total"></carts>
-        <products :products="products"></products>
+        <navigation :carts="carts" @open="isOpen=true"</navigation>
+        <carts :isOpen="isOpen" :carts="carts" :total="total" @open="isOpen = false" @clearCarts="clearCarts"></carts>
+        <products :products="products" @addToCart="addToCart"></products>
     `,
     data(){
         return {

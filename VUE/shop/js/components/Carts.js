@@ -10,7 +10,7 @@ export default {
             </div>
             <div v-if="carts.length"> <a href="#" @click="clearCarts()">清空購物車</a></div>
             <div>共 {{total}}</div>
-            <a href="#" @click="isOpen = false" class="absolute top-4 left-4">
+            <a href="#" @click="this.$emit('open')" class="absolute top-4 left-4">
                 <i class="fa-solid fa-circle-xmark fa-xl"></i>
             </a>
         </div>
@@ -18,6 +18,11 @@ export default {
     data(){
         return {
             // isOpen: false
+        }
+    },
+    methods:{
+        clearCarts(){
+            this.$emit('clearCarts')
         }
     },
     props:{
