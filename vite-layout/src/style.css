@@ -1,0 +1,204 @@
+nav {
+    width: 100%;
+    padding-block: 10px;
+    background-color: rgb(54 54 54 /.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    /* justify-content: space-between; */
+    padding-inline: 15px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+}
+.nav-menu {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: #eee;
+    padding: 5px 20px;
+}
+.nav-link {
+    transition: 300ms; 
+    display: block;
+    border-radius: 5px;
+}
+.nav-link:hover {
+    color: #222;
+    background-color: #fa0;
+}
+/* header */
+/* header {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #ccc;
+    background-image: url('https://picsum.photos/id/27/1200/600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+} */
+header {
+    width: 100%;
+    aspect-ratio: 16/10;
+    max-height: 800px;
+    position: relative;
+
+    background-color: #5e5e5e;
+}
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header-content {
+    position: absolute;
+    /* width: fit-content; */
+    /* width: 60%; */
+    /* max-width: 800px; */
+    width: min(800px,60%);
+    height: fit-content;
+    background-color: rgb(255 255 255 / .4);
+    backdrop-filter: blur(5px);
+    inset: 0; /* 等同top,bottom,left,right同時設定 */
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+.header-content  h1 {
+    font-size: 4rem;
+}
+.header-content p {
+    opacity: .8;
+}
+#about {
+    padding-block:100px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
+
+}
+#about h3 {
+    font-size: 1.5rem;
+}
+.container {
+    width:min(1200px,100%);
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-img {
+    flex:0 0 50%;
+    padding: 30px;
+    position: relative;
+    right: -100px;
+
+    
+}
+/* 
+https://colorhunt.co/palette/f8f6e397e7e16ad4dd7aa2e3
+https://colorhunt.co/palette/49698958a399a8cd9fe2f4c5
+https://colorhunt.co/palette/008dda41c9e2ace2e1f7eedd
+https://gradienthunt.com/gradient/45578
+*/
+
+.about-img img {
+    box-shadow: 
+        -15px 15px 0 0 #7AA2E3,
+        -30px 30px 0 0 #6AD4DD;
+    /* x y 模糊 擴散 顏色 */
+}
+.about-content {
+    flex:0 0 50%;
+    padding: 30px;
+    background-color: rgb(248, 246, 227 , .5);
+    backdrop-filter: blur(5px);
+    position: relative;
+    left:-100px
+}
+/* folio */
+#folio {
+    padding-block: 100px;
+    background-image: linear-gradient( 175deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% );
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2b2b2b;
+}
+.folio-item {
+    flex:0 0 25%;
+    padding: 10px;
+}
+.folio-item a {
+    background-color: #a7fff9;
+    aspect-ratio: 4/ 3;
+
+    display: block;
+}
+.folio-item a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 300ms;
+}
+/* .folio-item a:hover img{
+    opacity: .2;
+} */
+#folio:hover img:not(:hover) {
+    opacity: .2;
+}
+/* contact */
+#contact {
+    padding-block:100px;
+    background-color: #ffe6c9;
+}
+.contact-item {
+    flex:0 0 calc(100% / 4);
+    text-align: center;
+}
+#contact a {
+    color: #fd7240;
+}
+
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding-block: 15px;
+}
+
+/* gotop */
+.gotop {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    right: 40px;
+    bottom: 40px;
+    text-decoration: none;
+    color: #eee;
+    border-radius: 50%;
+    border: 2px solid #222;
+    transition: 300ms;
+}
+.gotop:hover {
+    background-color: #eee;
+    color: #222;
+}
